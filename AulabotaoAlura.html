@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Botoes Alura</title>
+</head>
+<body>
+    <input>
+    <button>Compare Segredo</button>
+
+    <script>
+        var segredo = Math.round(Math.random() *5);
+        var input= document.querySelector("input");
+        input.focus();
+        function verifica () {
+            if (input.value==segredo) {
+                alert("Você acertou!");
+            }
+            else {
+                alert("Você errou!");
+            }
+            input.value = "";
+            input.focus();
+        }
+        var button = document.querySelector("button");
+        button.onclick=verifica;
+
+    </script>
+    
+</body>
+
+</html>
